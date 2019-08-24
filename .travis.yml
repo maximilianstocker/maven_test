@@ -5,6 +5,11 @@ jdk:
   - oraclejdk8
   - openjdk8
 
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+
 # maven
 install: true
 script: mvn clean verify
