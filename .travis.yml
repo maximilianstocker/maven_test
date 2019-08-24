@@ -1,14 +1,7 @@
 # specify compiler
 language: java
 sudo: false # faster builds
-jdk:
-  - oraclejdk8
-  - openjdk8
-
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
+jdk: openjdk8
 
 # maven
 install: true
