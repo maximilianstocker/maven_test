@@ -8,6 +8,7 @@ import javax.swing.*;
 public class TestPlugin implements PlugInFilter {
 
     ImagePlus imagePlus = new ImagePlus();
+    final TextPanel textPanel = new TextPanel("Title");
 
     @Override
     public int setup(String arg, ImagePlus imp) {
@@ -24,7 +25,6 @@ public class TestPlugin implements PlugInFilter {
     private void showGenericDialog() {
         try {
 
-            final TextPanel textPanel = new TextPanel("Title");
             textPanel.setColumnHeadings("Description	Value");
             textPanel.appendLine("hello	" + "world");
 
