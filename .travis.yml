@@ -9,9 +9,7 @@ services:
 
 # maven
 install: true
-script:
-  - xvfb-run make test
-  - mvn clean verify
+script: mvn clean verify
 
 # cache maven dir for performance
 cache:
