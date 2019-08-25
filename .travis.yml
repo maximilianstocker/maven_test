@@ -3,9 +3,15 @@ language: java
 sudo: false # faster builds
 jdk: openjdk8
 
+dist: xenial
+services:
+  - xvfb
+
 # maven
 install: true
-script: mvn clean verify
+script:
+  - xvfb-run make test
+  - mvn clean verify
 
 # cache maven dir for performance
 cache:
